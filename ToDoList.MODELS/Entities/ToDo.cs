@@ -14,6 +14,8 @@ namespace ToDoList.MODELS.Entities
         [Key]
         public int Id { get; set; }
         [Required]
+        public string BusinessName { get; set; }
+        [Required]
         public string Description { get; set; }
         public bool IsDone { get; set; } = false;
         public DateTime ToDoNotifyDate { get; set; }=DateTime.Now;
