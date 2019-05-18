@@ -80,7 +80,28 @@
 
 @section scripts
 {
-    
+    <script>
+        $(function () {
+
+            $("#frmAdd").submit(function (ev) {
+                ev.preventDefault();
+                var data = {
+                    BusinessName: $("#txtBusinessName").val(),
+                    Description: $("#txtDescription").val()
+                }
+                $.ajax({
+                    url: '@Url.Action("Add","Home")',
+                    method: "post",
+                    dataType: "json",
+                    data:data
+                }).done(function(e) {
+                    alert(e.message);
+                });
+            });
+
+        });
+
+    </script>
     
 
 }

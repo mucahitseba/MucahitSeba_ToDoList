@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace ToDoList.MODELS.Entities
 {
-    
+    [Table("ToDoTable")]
     public class ToDo
     {
         [Key]
-        public int Id { get; set; }
+        public Guid ToDoId { get; set; } = Guid.NewGuid();
         [Required]
         public string BusinessName { get; set; }
         [Required]
         public string Description { get; set; }
         public bool IsDone { get; set; } = false;
         public DateTime ToDoNotifyDate { get; set; }=DateTime.Now;
-        public DateTime ToDoResultDate { get; set; }
+        public DateTime ToDoResultDate { get; set; }=DateTime.Now;
 
 
 

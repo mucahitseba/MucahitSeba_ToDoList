@@ -30,6 +30,7 @@ namespace ToDoList.UI.Controllers
                     ToDoResultDate = model.ToDoResultDate
                 };
                 new ToDoRepo().Insert(data);
+
                 
                 
                 return Json(new ResponseData()
