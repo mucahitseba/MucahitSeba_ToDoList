@@ -29,8 +29,8 @@
             <form class="form-inline" id="frmUpdate" style="display: none">
                 <input type="hidden" id="ToDoId" />
                 <div class="form-group">
-                    <label for="txtCategoryName2">Category Name</label>
-                    <input type="text" class="form-control" id="txtCategoryName2" placeholder="Category Name">
+                    <label for="txtBusinessName2">Business Name</label>
+                    <input type="text" class="form-control" id="txtBusinessName2" placeholder="Business Name">
                 </div>
                 <div class="form-group">
                     <label for="txtDescription2">Description</label>
@@ -113,6 +113,28 @@
                     alert(e.message);
                 });
             });
+            $("#frmUpdate").submit(function(ev) {
+                ev.preventDefault();
+                var data = {
+                    BusinessName: $("#txtBusinessName2").val(),
+                    Description: $("#txtDescription2").val(),
+                    ToDoId: $("#ToDoId").val()
+                };
+                $.ajax({
+                    url: '@Url.Action("Update","Home")',
+                    method: "post",
+                    dataType: "json",
+                    data:data
+                }).done(function(e) {
+                    alert(e.message);
+                    if (e.success) {
+                        init();
+                        $("#frmUpdate").hide();
+                        $("#frmAdd").show(400);
+                    }
+                });
+            });
+
             $("#resultdiv").hide();
             $("#txtsearch").keyup(function (e) {
                 $("#resultmessage").hide();
@@ -156,13 +178,56 @@
                         td4.innerText = value.ToDoNotifyDate.toString();
                         var td5 = document.createElement("td");
                         td5.innerText = value.ToDoResultDate.toString();
+                        var td6 = document.createElement("td");
+                        var a = document.createElement("a");
+
                         
+                        var btnSil = document.createElement("input");
+                        $(btnSil).attr({
+                            "type": "button",
+                            "class": "btn btn-danger",
+                            "value": "Delete",
+                            "name": value.ToDoId
+                        }).on("click", function () {
+                            var id = this.name;
+                            $.ajax({
+                                url: "@Url.Action("Delete","Home")",
+                                method: "post",
+                                dataType: "json",
+                                data: {id:id}
+                            }).done(function(e) {
+                                alert(e.message);
+                                init();
+                            });
+                        });
+                        var btnGuncelle = document.createElement("input");
+                        $(btnGuncelle).attr({
+                            "type": "button",
+                            "class": "btn btn-warning",
+                            "value": "Update",
+                            "name": value.ToDoId
+                        }).on("click",
+                            function () {
+                                var selectedid = this.name;
+                                var satir = $(this).parent().parent()[0].childNodes;
+                                var businessName = satir[1].innerText;
+                                var description = satir[2].innerText;
+                                $("#ToDoId").val(selectedid);
+                                $("#txtBusinessName2").val(businessName);
+                                $("#txtDescription2").val(description);
+                                $("#frmAdd").hide();
+                                $("#frmUpdate").show(400);
+                            });
                         
+
+                        $(a).appendTo(td6);
+                        $(btnSil).appendTo(td6);
+                        $(btnGuncelle).appendTo(td6);
 
                         
                         
 
-                        $(tr).append(th).append(td).append(td2).append(td3).append(td4).append(td5).appendTo($("#resultbody"));
+                        $(tr).append(th).append(td).append(td2).append(td3).append(td4).append(td5).append(td6).appendTo($("#resultbody"));
                     });
             }
 

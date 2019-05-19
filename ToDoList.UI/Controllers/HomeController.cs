@@ -136,5 +136,39 @@ namespace ToDoList.UI.Controllers
                 }, JsonRequestBehavior.AllowGet);
             }
         }
+        [HttpPost]
+        public JsonResult Update(ToDo model)
+        {
+            try
+            {
+                MyContext db=new MyContext();
+                
+                var selected = db.ToDoDbSet.Find(model.ToDoId);
+                if (selected == null)
+                {
+                    return Json(new ResponseData()
+                    {
+                        message = $"Seçili iş bulunamadi",
+                        success = false
+                    }, JsonRequestBehavior.AllowGet);
+                }
+                selected.Description = model.Description;
+                selected.BusinessName = model.BusinessName;
+                new ToDoRepo().Update(model);
+                return Json(new ResponseData()
+                {
+                    message = $"{selected.BusinessName} ismindeki iş basariyla guncellendi",
+                    success = true
+                }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(new ResponseData()
+                {
+                    message = $"İş guncelleme isleminde hata {ex.Message}",
+                    success = false
+                }, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }
