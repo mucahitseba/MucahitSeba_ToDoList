@@ -11,6 +11,7 @@ using ToDoList.MODELS.ViewModels;
 
 namespace ToDoList.UI.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         // GET: Home

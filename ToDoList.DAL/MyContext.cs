@@ -4,11 +4,12 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.EntityFramework;
 using ToDoList.MODELS.Entities;
 
 namespace ToDoList.DAL
 {
-    public class MyContext:DbContext
+    public class MyContext:IdentityDbContext
     {
         public DateTime InstanceDate { get; set; }
         public MyContext() : base("name=MyCon")

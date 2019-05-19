@@ -49,9 +49,36 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -97,6 +124,179 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\app-custom.css" />
+    <Content Include="assets\css\app.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\colors\default.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\icons\linea-icons\linea.css" />
+    <Content Include="assets\css\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="assets\css\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="assets\css\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="assets\css\ionicons.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\main2.css" />
+    <Content Include="assets\css\spinners.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\util.css" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\ionicons.svg" />
+    <Content Include="assets\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="assets\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="assets\fonts\montserrat\OFL.txt" />
+    <Content Include="assets\img\avatars\avatar1.jpg" />
+    <Content Include="assets\img\avatars\avatar10.jpg" />
+    <Content Include="assets\img\avatars\avatar11.jpg" />
+    <Content Include="assets\img\avatars\avatar12.jpg" />
+    <Content Include="assets\img\avatars\avatar2.jpg" />
+    <Content Include="assets\img\avatars\avatar4.jpg" />
+    <Content Include="assets\img\avatars\avatar5.jpg" />
+    <Content Include="assets\img\avatars\avatar6.jpg" />
+    <Content Include="assets\img\avatars\avatar7.jpg" />
+    <Content Include="assets\img\avatars\avatar8.jpg" />
+    <Content Include="assets\img\avatars\avatar9.jpg" />
+    <Content Include="assets\img\bg-01.jpg" />
+    <Content Include="assets\img\favicons\apple-touch-icon.png" />
+    <Content Include="assets\img\favicons\favicon.ico" />
+    <Content Include="assets\img\logo\logo-backend.png" />
+    <Content Include="assets\img\logo\logo-frontend.png" />
+    <Content Include="assets\img\misc\base_pages_profile_header_bg.jpg" />
+    <Content Include="assets\img\misc\frontend_about1.png" />
+    <Content Include="assets\img\misc\frontend_about2.png" />
+    <Content Include="assets\img\misc\frontend_header_bg.png" />
+    <Content Include="assets\img\misc\frontend_home1.png" />
+    <Content Include="assets\img\misc\frontend_home2.png" />
+    <Content Include="assets\img\misc\frontend_home3.png" />
+    <Content Include="assets\img\misc\frontend_home4.png" />
+    <Content Include="assets\img\photos\photo1.jpg" />
+    <Content Include="assets\img\photos\photo2.jpg" />
+    <Content Include="assets\img\photos\photo3.jpg" />
+    <Content Include="assets\img\photos\photo4.jpg" />
+    <Content Include="assets\img\photos\photo5.jpg" />
+    <Content Include="assets\img\photos\photo6.jpg" />
+    <Content Include="assets\js\app-custom.js" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\core\bootstrap.min.js" />
+    <Content Include="assets\js\core\jquery.min.js" />
+    <Content Include="assets\js\core\jquery.placeholder.min.js" />
+    <Content Include="assets\js\core\jquery.scrollLock.min.js" />
+    <Content Include="assets\js\core\jquery.slimscroll.min.js" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\custom.min.js" />
+    <Content Include="assets\js\dashboard1.js" />
+    <Content Include="assets\js\global.js" />
+    <Content Include="assets\js\jquery.slimscroll.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\morris-data.js" />
+    <Content Include="assets\js\pages\base_forms_validation.js" />
+    <Content Include="assets\js\pages\base_forms_wizard.js" />
+    <Content Include="assets\js\pages\base_js_charts_chartjs.js" />
+    <Content Include="assets\js\pages\base_js_charts_flot.js" />
+    <Content Include="assets\js\pages\base_js_charts_sparkline.js" />
+    <Content Include="assets\js\pages\base_js_maps.js" />
+    <Content Include="assets\js\pages\base_tables_datatables.js" />
+    <Content Include="assets\js\pages\base_ui_progress.js" />
+    <Content Include="assets\js\pages\frontend_contact.js" />
+    <Content Include="assets\js\pages\index.js" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="assets\js\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="assets\js\plugins\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="assets\js\plugins\bootstrap-datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="assets\js\plugins\bootstrap-notify\bootstrap-notify.min.js" />
+    <Content Include="assets\js\plugins\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="assets\js\plugins\chartjs\Chart.min.js" />
+    <Content Include="assets\js\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="assets\js\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="assets\js\plugins\dropzonejs\dropzone.min.css" />
+    <Content Include="assets\js\plugins\dropzonejs\dropzone.min.js" />
+    <Content Include="assets\js\plugins\flot\jquery.flot.min.js" />
+    <Content Include="assets\js\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="assets\js\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="assets\js\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="assets\js\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="assets\js\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="assets\js\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="assets\js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="assets\js\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="assets\js\plugins\fullcalendar\gcal.js" />
+    <Content Include="assets\js\plugins\fullcalendar\gcal.min.js" />
+    <Content Include="assets\js\plugins\fullcalendar\lang-all.js" />
+    <Content Include="assets\js\plugins\fullcalendar\moment.min.js" />
+    <Content Include="assets\js\plugins\gmapsjs\gmaps.min.js" />
+    <Content Include="assets\js\plugins\highlightjs\github-gist.min.css" />
+    <Content Include="assets\js\plugins\highlightjs\highlight.pack.js" />
+    <Content Include="assets\js\plugins\jquery-tags-input\jquery.tagsinput.min.css" />
+    <Content Include="assets\js\plugins\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="assets\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="assets\js\plugins\jquery-validation\jquery.validate.min.js" />
+    <Content Include="assets\js\plugins\magnific-popup\magnific-popup.min.css" />
+    <Content Include="assets\js\plugins\magnific-popup\magnific-popup.min.js" />
+    <Content Include="assets\js\plugins\masked-inputs\jquery.maskedinput.min.js" />
+    <Content Include="assets\js\plugins\select2\select2-bootstrap.css" />
+    <Content Include="assets\js\plugins\select2\select2.full.min.js" />
+    <Content Include="assets\js\plugins\select2\select2.min.css" />
+    <Content Include="assets\js\plugins\slick\ajax-loader.gif" />
+    <Content Include="assets\js\plugins\slick\fonts\slick.svg" />
+    <Content Include="assets\js\plugins\slick\slick-theme.min.css" />
+    <Content Include="assets\js\plugins\slick\slick.min.css" />
+    <Content Include="assets\js\plugins\slick\slick.min.js" />
+    <Content Include="assets\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="assets\js\toastr.js" />
+    <Content Include="assets\js\waves.js" />
+    <Content Include="assets\vendor\animate\animate.css" />
+    <Content Include="assets\vendor\animsition\css\animsition.css" />
+    <Content Include="assets\vendor\animsition\css\animsition.min.css" />
+    <Content Include="assets\vendor\animsition\js\animsition.js" />
+    <Content Include="assets\vendor\animsition\js\animsition.min.js" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\popper.js" />
+    <Content Include="assets\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="assets\vendor\countdowntime\countdowntime.js" />
+    <Content Include="assets\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="assets\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="assets\vendor\datepicker\daterangepicker.css" />
+    <Content Include="assets\vendor\datepicker\daterangepicker.js" />
+    <Content Include="assets\vendor\datepicker\moment.min.js" />
+    <Content Include="assets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="assets\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="assets\vendor\daterangepicker\moment.js" />
+    <Content Include="assets\vendor\daterangepicker\moment.min.js" />
+    <Content Include="assets\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="assets\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="assets\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="assets\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="assets\vendor\jquery\jquery.js" />
+    <Content Include="assets\vendor\jquery\jquery.min.js" />
+    <Content Include="assets\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="assets\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="assets\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="assets\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="assets\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="assets\vendor\select2\select2.css" />
+    <Content Include="assets\vendor\select2\select2.js" />
+    <Content Include="assets\vendor\select2\select2.min.css" />
+    <Content Include="assets\vendor\select2\select2.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Prettify\prettify.css" />
@@ -110,6 +310,118 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Code\GlyphIcon.cshtml" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="assets\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="assets\css\maps\app-custom.css.map" />
+    <Content Include="assets\css\maps\app.css.map" />
+    <Content Include="assets\css\maps\bootstrap.css.map" />
+    <Content Include="assets\css\maps\font-awesome.css.map" />
+    <Content Include="assets\css\maps\ionicons.css.map" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="assets\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\ionicons.eot" />
+    <Content Include="assets\fonts\ionicons.ttf" />
+    <Content Include="assets\fonts\ionicons.woff" />
+    <Content Include="assets\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="assets\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="assets\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="assets\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="assets\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="assets\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="assets\js\plugins\slick\fonts\slick.eot" />
+    <Content Include="assets\js\plugins\slick\fonts\slick.ttf" />
+    <Content Include="assets\js\plugins\slick\fonts\slick.woff" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="assets\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="assets\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="assets\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="assets\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -148,6 +460,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StartUp.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,6 +478,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

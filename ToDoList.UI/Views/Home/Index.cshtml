@@ -1,7 +1,14 @@
-﻿
+﻿@using ToDoList.BLL.Identity
 @{
     ViewBag.Title = "Index";
 }
+<li class="dropdown" >
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@MembershipTools.GetNameSurname(null)</a>
+    <ul class="dropdown-menu">
+
+        <li><a href=@Url.Action("Logout", "Account")><i class="fa fa-sign-out"></i> Logout </a></li>
+    </ul>
+</li>
 <br />
 <br />
 <br />
@@ -24,7 +31,7 @@
                 <button type="submit" class="btn btn-info">Add</button>
                 <div id="messagediv"></div>
             </form>
-            
+
 
             <form class="form-inline" id="frmUpdate" style="display: none">
                 <input type="hidden" id="ToDoId" />
@@ -56,21 +63,21 @@
             </div><!-- /.col-lg-6 -->
         </div>
     </div>
-    <br/>
-    <br/>
+    <br />
+    <br />
     <div class="row" id="resultdiv">
         <div class="col-md-10 col-md-offset-1">
             <table class="table table-responsive table-striped">
                 <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Business Name</th>
-                    <th>Description</th>
-                    <th>Is Done</th>
-                    <th>To Do Notify Date</th>
-                    <th>To Do Result Date</th>
-                    <th>Action</th>
-                </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Business Name</th>
+                        <th>Description</th>
+                        <th>Is Done</th>
+                        <th>To Do Notify Date</th>
+                        <th>To Do Result Date</th>
+                        <th>Action</th>
+                    </tr>
                 </thead>
                 <tbody id="resultbody"></tbody>
             </table>
@@ -181,7 +188,7 @@
                         var td6 = document.createElement("td");
                         var a = document.createElement("a");
 
-                        
+
                         var btnSil = document.createElement("input");
                         $(btnSil).attr({
                             "type": "button",
@@ -218,25 +225,25 @@
                                 $("#frmAdd").hide();
                                 $("#frmUpdate").show(400);
                             });
-                        
+
 
                         $(a).appendTo(td6);
                         $(btnSil).appendTo(td6);
                         $(btnGuncelle).appendTo(td6);
 
-                        
-                        
+
+
 
                         $(tr).append(th).append(td).append(td2).append(td3).append(td4).append(td5).append(td6).appendTo($("#resultbody"));
                     });
             }
 
             init();
-             
+
         });
 
     </script>
-    
+
 
 }
 
